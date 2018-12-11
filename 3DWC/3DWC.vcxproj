@@ -23,6 +23,7 @@
     <ClCompile Include="WordsFrequency\WordsFrequency.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="WordsFrequency\Frequency.h" />
     <ClInclude Include="WordsFrequency\WordsFrequency.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

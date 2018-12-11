@@ -2,6 +2,8 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 
+#include "Frequency.h"
+
 #include <string>
 #include <rapidjson/document.h>
 #include <glog/logging.h>
@@ -12,9 +14,13 @@
 #include <openssl/md5.h>
 #include <sstream>
 #include <cpr/cpr.h>
-
-#define CL_BEGIN namespace cl{
-#define CL_END }
+#include <iostream>
+#include <codecvt>
+#include <windows.h>
+#include <locale>
+#include <cctype>
+#include <iomanip>
+#include <cstring>
 
 CL_BEGIN
 
@@ -28,7 +34,7 @@ class WordsFrequency
 {
 public:
 	using Params = std::map<std::string, std::string>;
-	using Frequency = std::map<std::string, long>;
+	using Frequency = cl::Frequency;
 public:
 	// json file: app_id and app_key, like:
 	/*
@@ -46,10 +52,13 @@ public:
 
 private:
 	std::string generate_sign(Params& params);
+	Frequency frequency_from_json(rapidjson::Document& document);
 private:
 	std::string _app_id;
 	std::string _app_key;
 	std::string _nonce_str = "WordsFrequency";
+	const int _retry_times = 10;
+	std::vector<std::string> _ignore_words = { "，","。","？","“","”",",",".","：", "你","我", "他", "它","她","的", "了" };
 };
 
 CL_END

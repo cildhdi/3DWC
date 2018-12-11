@@ -29,5 +29,8 @@
     <ClInclude Include="WordsFrequency\WordsFrequency.h">
       <Filter>WordsFrequency</Filter>
     </ClInclude>
+    <ClInclude Include="WordsFrequency\Frequency.h">
+      <Filter>WordsFrequency</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
