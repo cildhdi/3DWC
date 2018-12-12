@@ -33,31 +33,31 @@ CL_BEGIN
 class WordsFrequency
 {
 public:
-	using Params = std::map<std::string, std::string>;
-	using Frequency = cl::Frequency;
+    using Params = std::map<std::string, std::string>;
+    using Frequency = cl::Frequency;
 public:
-	// json file: app_id and app_key, like:
-	/*
+    // json file: app_id and app_key, like:
+    /*
 {
-	"app_id" : "7173982713",
-	"app_key" : "JKJkjHhjhJHFf"
+    "app_id" : "7173982713",
+    "app_key" : "JKJkjHhjhJHFf"
 }
-	*/
-	// see https://ai.qq.com/doc/nlpbase.shtml
-	// and https://ai.qq.com/doc/auth.shtml
-	WordsFrequency(const std::string &config_path);
-	WordsFrequency() = delete;
-	Frequency text(const std::string& text);
-	Frequency sentence(const std::string& sentence);
+    */
+    // see https://ai.qq.com/doc/nlpbase.shtml
+    // and https://ai.qq.com/doc/auth.shtml
+    WordsFrequency(const std::string &config_path);
+    WordsFrequency() = delete;
+    Frequency text(const std::string& text);
+    Frequency sentence(const std::string& sentence);
 
 private:
-	Frequency frequency_from_json(rapidjson::Document& document);
+    Frequency frequency_from_json(rapidjson::Document& document);
 private:
-	std::string _app_id;
-	std::string _app_key;
-	std::string _nonce_str = "WordsFrequency";
-	const int _retry_times = 10;
-	std::vector<std::string> _ignore_words = { "，","。","？","“","”",",",".","：", "你","我", "他", "它","她","的", "了" };
+    std::string _app_id;
+    std::string _app_key;
+    std::string _nonce_str = "WordsFrequency";
+    const int _retry_times = 10;
+    std::vector<std::string> _ignore_words = { "，","。","？","“","”",",",".","：", "你","我", "他", "它","她","的", "了" };
 };
 
 CL_END
