@@ -51,7 +51,6 @@ public:
 	Frequency sentence(const std::string& sentence);
 
 private:
-	std::string generate_sign(Params& params);
 	Frequency frequency_from_json(rapidjson::Document& document);
 private:
 	std::string _app_id;

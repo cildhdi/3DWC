@@ -137,14 +137,12 @@ WordsFrequency::Frequency WordsFrequency::frequency_from_json(rapidjson::Documen
 	for (rapidjson::SizeType i = 0; i < mix_tokens.Size(); i++)
 		frequency[mix_tokens[i]["word"].GetString()]++;
 	std::ostringstream oss;
-	frequency.frequency.erase(std::remove_if(frequency.frequency.begin(), frequency.frequency.end(), [&](const Frequency::PSL& p)
-	{
-		return std::find(_ignore_words.begin(), _ignore_words.end(), p.first) != _ignore_words.end();
-	}), frequency.frequency.end());
+	frequency.remove(_ignore_words);
 	frequency.sort();
 	for (auto& p : frequency.frequency)
 		oss << "\nword:  " << std::setw(10) << std::left << p.first << "times:  " << p.second;
 	LOG(INFO) << "result in descending order:" << oss.str();
+	std::cout << frequency.to_json();
 	return frequency;
 }
 
