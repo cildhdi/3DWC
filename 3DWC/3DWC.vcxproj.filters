@@ -24,6 +24,9 @@
     <ClCompile Include="..\WordsFrequency\WordsFrequency.cpp">
       <Filter>WordsFrequency</Filter>
     </ClCompile>
+    <ClCompile Include="..\WordsFrequency\Frequency.cpp">
+      <Filter>WordsFrequency</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\WordsFrequency\Frequency.h">
@@ -31,6 +34,9 @@
     </ClInclude>
     <ClInclude Include="..\WordsFrequency\WordsFrequency.h">
       <Filter>WordsFrequency</Filter>
+    </ClInclude>
+    <ClInclude Include="App.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

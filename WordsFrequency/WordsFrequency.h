@@ -5,7 +5,6 @@
 #include "Frequency.h"
 
 #include <string>
-#include <rapidjson/document.h>
 #include <glog/logging.h>
 #include <map>
 #include <cstdio>
