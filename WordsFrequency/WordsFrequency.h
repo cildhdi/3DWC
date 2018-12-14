@@ -21,6 +21,7 @@
 #include <cctype>
 #include <iomanip>
 #include <cstring>
+#include <memory>
 
 CL_BEGIN
 

@@ -39,11 +39,11 @@ WordsFrequency::WordsFrequency(const std::string &config_path)
     std::fseek(fp, 0, SEEK_END);
     size_t filesize = static_cast<size_t>(std::ftell(fp));
     std::fseek(fp, 0, SEEK_SET);
-    char *buffer = new char[filesize + 1];
-    size_t len = std::fread(buffer, 1, filesize, fp);
+    auto buffer = std::unique_ptr<char[]>(new char[filesize + 1]());
+    size_t len = std::fread(buffer.get(), 1, filesize, fp);
     buffer[len] = '\0';
     rapidjson::Document doc;
-    doc.Parse(buffer);
+    doc.Parse(buffer.get());
 
     rapidjson::Value &ai = doc["app_id"];
     if (ai.GetStringLength())
@@ -65,7 +65,6 @@ WordsFrequency::WordsFrequency(const std::string &config_path)
     }
     LOG(INFO) << "config:\napp_id:" << _app_id << "\napp_key:" << _app_key;
     std::fclose(fp);
-    delete[] buffer;
 }
 
 unsigned char md5[17] = { 0 };
@@ -142,7 +141,6 @@ WordsFrequency::Frequency WordsFrequency::frequency_from_json(rapidjson::Documen
     for (auto& p : frequency.frequency)
         oss << "\nword:  " << std::setw(10) << std::left << p.first << "times:  " << p.second;
     LOG(INFO) << "result in descending order:" << oss.str();
-    std::cout << frequency.to_json();
     return frequency;
 }
 
