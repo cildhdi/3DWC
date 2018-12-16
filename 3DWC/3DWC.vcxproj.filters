@@ -16,6 +16,9 @@
     <Filter Include="WordsFrequency">
       <UniqueIdentifier>{c144ecd6-293b-44a5-afe3-fdf704163c93}</UniqueIdentifier>
     </Filter>
+    <Filter Include="WordConversion">
+      <UniqueIdentifier>{f0297ad0-3d98-40d6-bc16-8f5506a8be2d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -27,6 +30,9 @@
     <ClCompile Include="..\WordsFrequency\Frequency.cpp">
       <Filter>WordsFrequency</Filter>
     </ClCompile>
+    <ClCompile Include="..\WordConversion\WordConversion.cpp">
+      <Filter>WordConversion</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\WordsFrequency\Frequency.h">
@@ -35,7 +41,10 @@
     <ClInclude Include="..\WordsFrequency\WordsFrequency.h">
       <Filter>WordsFrequency</Filter>
     </ClInclude>
-    <ClInclude Include="App.h">
+    <ClInclude Include="..\WordConversion\WordConversion.h">
+      <Filter>WordConversion</Filter>
+    </ClInclude>
+    <ClInclude Include="..\App.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

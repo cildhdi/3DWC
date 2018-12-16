@@ -28,7 +28,7 @@ public:
 
     virtual ~App()
     {
-
+        Gdiplus::GdiplusShutdown(_gdi_token);
     }
 };
 

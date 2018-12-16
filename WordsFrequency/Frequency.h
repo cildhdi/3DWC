@@ -1,7 +1,6 @@
 #pragma once
 
-#define CL_BEGIN namespace cl{
-#define CL_END }
+#include <App.h>
 
 #include <vector>
 #include <algorithm>
