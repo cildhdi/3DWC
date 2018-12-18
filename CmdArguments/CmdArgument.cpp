@@ -15,7 +15,7 @@ CmdArgument::ArgumentValue CmdArgument::value() const
 
 CmdArgument::CmdArgument(const std::string& arg, char seperate)
 {
-    const int seperate_pos = arg.find_first_of(seperate);
+    const auto seperate_pos = arg.find_first_of(seperate);
     if (seperate_pos == arg.npos)
     {
         _arg_name = _arg_value = "";
