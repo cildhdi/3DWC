@@ -2,7 +2,7 @@
 
 CL_BEGIN
 
-WordConversion::WordConversion(const std::wstring & font_family, Gdiplus::REAL em_size)
+WordConversion::WordConversion(Gdiplus::REAL em_size, const std::wstring & font_family)
     :_em_size(em_size), _font_family(font_family.c_str()), _pen(Gdiplus::Color::Black, 1),
     _format(Gdiplus::StringFormat::GenericTypographic()), _path(nullptr)
 {

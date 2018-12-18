@@ -18,7 +18,7 @@ private:
     Gdiplus::StringFormat _format;
     Gdiplus::Pen _pen;
 public:
-    WordConversion(const std::wstring& font_family = L"Microsoft YaHei", Gdiplus::REAL em_size = 50);
+    WordConversion(Gdiplus::REAL em_size = 30, const std::wstring& font_family = L"Microsoft YaHei");
     // return the minimum width and height of string
     Gdiplus::Rect begin_conversion(const std::wstring& s);
     bool visible(INT x, INT y);

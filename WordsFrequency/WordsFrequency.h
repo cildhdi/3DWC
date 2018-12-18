@@ -3,6 +3,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include "Frequency.h"
+#include <utility/utility.h>
 
 #include <string>
 #include <glog/logging.h>
@@ -17,7 +18,6 @@
 #include <codecvt>
 #include <windows.h>
 #include <locale>
-#include <cctype>
 #include <iomanip>
 #include <cstring>
 #include <memory>

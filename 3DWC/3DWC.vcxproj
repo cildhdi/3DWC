@@ -19,6 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\CmdArguments\CmdArgument.cpp" />
+    <ClCompile Include="..\CmdArguments\CmdArguments.cpp" />
+    <ClCompile Include="..\utility\utility.cpp" />
     <ClCompile Include="..\WordConversion\WordConversion.cpp" />
     <ClCompile Include="..\WordsFrequency\Frequency.cpp" />
     <ClCompile Include="..\WordsFrequency\WordsFrequency.cpp" />
@@ -26,6 +29,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\App.h" />
+    <ClInclude Include="..\CmdArguments\CmdArgument.h" />
+    <ClInclude Include="..\CmdArguments\CmdArguments.h" />
+    <ClInclude Include="..\utility\utility.h" />
     <ClInclude Include="..\WordConversion\WordConversion.h" />
     <ClInclude Include="..\WordsFrequency\Frequency.h" />
     <ClInclude Include="..\WordsFrequency\WordsFrequency.h" />

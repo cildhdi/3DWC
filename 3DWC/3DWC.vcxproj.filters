@@ -19,6 +19,12 @@
     <Filter Include="WordConversion">
       <UniqueIdentifier>{f0297ad0-3d98-40d6-bc16-8f5506a8be2d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CmdArguments">
+      <UniqueIdentifier>{6ebccef9-4e06-4c97-8da8-adf64f7d2140}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utility">
+      <UniqueIdentifier>{2f83cdd9-064c-4004-82a6-43621a49bc14}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -33,6 +39,15 @@
     <ClCompile Include="..\WordConversion\WordConversion.cpp">
       <Filter>WordConversion</Filter>
     </ClCompile>
+    <ClCompile Include="..\CmdArguments\CmdArgument.cpp">
+      <Filter>CmdArguments</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CmdArguments\CmdArguments.cpp">
+      <Filter>CmdArguments</Filter>
+    </ClCompile>
+    <ClCompile Include="..\utility\utility.cpp">
+      <Filter>utility</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\WordsFrequency\Frequency.h">
@@ -46,6 +61,15 @@
     </ClInclude>
     <ClInclude Include="..\App.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CmdArguments\CmdArgument.h">
+      <Filter>CmdArguments</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CmdArguments\CmdArguments.h">
+      <Filter>CmdArguments</Filter>
+    </ClInclude>
+    <ClInclude Include="..\utility\utility.h">
+      <Filter>utility</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
