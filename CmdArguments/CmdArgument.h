@@ -27,9 +27,11 @@ public:
 private:
     ArgumentName _arg_name;
     ArgumentValue _arg_value;
+    bool _has_value;
 public:
     ArgumentName name() const;
     ArgumentValue value() const;
+    bool has_value() const;
     template<typename Value>
     Value to() const;
 public:
